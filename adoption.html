@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHCD-UK|ADOPTION</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="adoption.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">CHCD-UK</a>
+            </div>
+
+            <ul class="nav-links mb-0">
+                <button class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#objective">Core Objectives</a></li>
+                <li><a href="index.html#history">Work History</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="partner.html">Partnership</a></li>
+                <li><a href="index.html#board">Board</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="donate">
+                <a href="index.html#donate">Donate</a>
+            </div>
+
+            <button class="open">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="europe-icon">
+                <i class="fas fa-globe-europe"></i>
+            </div>
+            <h1>Europe Adoption Dashboard</h1>
+            <p>Adopt a European country for prayer, mission trips, or church planting initiatives</p>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="selection-panel">
+                <h2>Select a Country & Initiative</h2>
+
+                <div class="form-group">
+                    <label for="countrySelect">Choose a European Country</label>
+                    <select class="form-select" id="countrySelect">
+                        <option value="">-- Select a country --</option>
+                        <option value="france">France</option>
+                        <option value="germany">Germany</option>
+                        <option value="italy">Italy</option>
+                        <option value="spain">Spain</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="poland">Poland</option>
+                        <option value="romania">Romania</option>
+                        <option value="netherlands">Netherlands</option>
+                        <option value="belgium">Belgium</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="greece">Greece</option>
+                        <option value="sweden">Sweden</option>
+                        <option value="austria">Austria</option>
+                        <option value="hungary">Hungary</option>
+                        <option value="ukraine">Ukraine</option>
+                    </select>
+                </div>
+
+                <h3>Select Initiative Type</h3>
+                <div class="initiative-cards">
+                    <div class="initiative-card initiative-prayer" data-initiative="prayer">
+                        <div class="initiative-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h3>Prayer Adoption</h3>
+                            <p>Commit to regularly pray for this nation and its people</p>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card initiative-mission" data-initiative="mission">
+                        <div class="initiative-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h3>Mission Trip</h3>
+                            <p>Join or organize a mission trip to this country</p>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card initiative-planting" data-initiative="planting">
+                        <div class="initiative-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h3>Church Planting - Business as Mission</h3>
+                            <p>Support church planting efforts through business initiatives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h2>Adoption Preview</h2>
+
+                <div class="country-preview">
+                    <div class="country-flag" id="countryFlag"
+                        style="background: linear-gradient(to right, #002395 0%, #002395 33%, #FFFFFF 33%, #FFFFFF 66%, #ED2939 66%, #ED2939 100%);">
+                    </div>
+                    <h2 class="country-name" id="countryName">Select a country</h2>
+                    <p class="country-details" id="countryDetails">Choose a country and initiative to see details</p>
+
+                    <div id="initiativeBadges"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="#" class="btn-adopt" id="adoptButton">Adopt This Country</a>
+                    <a href="#" class="btn-secondary">Learn More About Initiatives</a>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <h2>Adoption Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Countries Available</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">137</div>
+                        <div class="stat-label">Prayer Adoptions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Mission Trips</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">19</div>
+                        <div class="stat-label">Church Plants</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-badge">
+                        <i class="fas fa-heart"></i> Making a Difference
+                    </div>
+                    <h5 class="footer-title">About Our Mission</h5>
+                    <p>
+                        We are committed to creating sustainable change through community
+                        empowerment and development initiatives across Africa.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#about"><i class="fas fa-chevron-right"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="#objective"><i class="fas fa-chevron-right"></i> Core Objectives</a>
+                        </li>
+                        <li>
+                            <a href="#history"><i class="fas fa-chevron-right"></i> Work History</a>
+                        </li>
+                        <li>
+                            <a href="adoption.html"><i class="fas fa-chevron-right"></i> Adoption</a>
+                        </li>
+                        <li>
+                            <a href="partner.html"><i class="fas fa-chevron-right"></i>Partnership/a>
+                        </li>
+                        <li>
+                            <a href="#board"><i class="fas fa-chevron-right"></i> Board</a>
+                        </li>
+                        <li>
+                        <li>
+                            <a href="#events"><i class="fas fa-chevron-right"></i>Events</a>
+                        </li>
+                        <li>
+                            <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Details</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tottenham Town Hall
+
+                                <br />Approach Rd, London N15 4RY,<br />United Kingdom</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+44 777232845<br />+44 7961453681 <br>+44 7417562719</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>id@chcduk.org <br />swww.chcduk.org
+                                <br />www.chcdonline.org</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Stay Updated</h5>
+                    <p>
+                        Subscribe to our newsletter for the latest updates on our projects
+                        and initiatives.
+                    </p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required />
+                        <button type="submit">
+                            Subscribe <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>
+                    &copy; <span id="Date"></span> Community Hope. All rights reserved.
+                    | Designed with
+                    <i class="fas fa-heart" style="color: #ffd700"></i> for a better
+                    tomorrow
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="adoption.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+:root {
+  --primary-color: #2d5b7c;
+  --secondary-color: #5a7d9a;
+  --accent-color: #ffd700;
+  --light-bg: #f8f9fa;
+  --dark-bg: #1a2e3f;
+  --nigeria-green: #008751;
+  --nigeria-white: #ffffff;
+  --kenya-red: #de2910;
+  --kenya-green: #006600;
+  --kenya-black: #000000;
+  --kenya-white: #ffffff;
+  --uganda-black: #000000;
+  --uganda-yellow: #ffd100;
+  --uganda-red: #d90000;
+  --ghana-red: #ce1126;
+  --ghana-yellow: #fcd116;
+  --ghana-green: #006b3f;
+  --europe-blue: #003399;
+  --europe-yellow: #ffcc00;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  line-height: 1.6;
+}
+
+.partnerships-section {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+.section-header p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.country-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.country-tab {
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.country-tab.active {
+  color: white;
+}
+
+.country-tab.nigeria {
+  background-color: var(--nigeria-green);
+  color: var(--nigeria-white);
+}
+
+.country-tab.kenya {
+  background: linear-gradient(
+    to bottom,
+    var(--kenya-black) 0%,
+    var(--kenya-black) 25%,
+    var(--kenya-red) 25%,
+    var(--kenya-red) 50%,
+    var(--kenya-green) 50%,
+    var(--kenya-green) 75%,
+    var(--kenya-white) 75%,
+    var(--kenya-white) 100%
+  );
+  color: var(--kenya-black);
+}
+
+.country-tab.uganda {
+  background: linear-gradient(
+    to bottom,
+    var(--uganda-black) 0%,
+    var(--uganda-black) 33%,
+    var(--uganda-yellow) 33%,
+    var(--uganda-yellow) 66%,
+    var(--uganda-red) 66%,
+    var(--uganda-red) 100%
+  );
+  color: white;
+}
+
+.country-tab.ghana {
+  background: linear-gradient(
+    to bottom,
+    var(--ghana-red) 0%,
+    var(--ghana-red) 33%,
+    var(--ghana-yellow) 33%,
+    var(--ghana-yellow) 66%,
+    var(--ghana-green) 66%,
+    var(--ghana-green) 100%
+  );
+  color: white;
+}
+
+.country-tab.europe {
+  background: linear-gradient(
+    to bottom,
+    var(--europe-blue) 0%,
+    var(--europe-blue) 50%,
+    var(--europe-yellow) 50%,
+    var(--europe-yellow) 100%
+  );
+  color: var(--europe-blue);
+}
+
+.country-tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.country-content {
+  display: none;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.country-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.country-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.country-flag {
+  width: 80px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.country-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.newsletter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.newsletter-card {
+  background: var(--light-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-image {
+  height: 160px;
+  overflow: hidden;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.newsletter-card:hover .newsletter-image img {
+  transform: scale(1.05);
+}
+
+.newsletter-content {
+  padding: 20px;
+}
+
+.newsletter-date {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.newsletter-excerpt {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-read {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.btn-read:hover {
+  background: #3a6d96;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.partnership-opportunities {
+  background: var(--light-bg);
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.partnership-opportunities h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.opportunity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.opportunity-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.opportunity-list li::before {
+  content: "•";
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.subscribe-section {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.subscribe-section h3 {
+  margin-bottom: 15px;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.subscribe-btn {
+  background: var(--accent-color);
+  color: var(--dark-bg);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0 5px 5px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #ffed4e;
+}
+
+@media (max-width: 768px) {
+  .country-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-tab {
+    width: 200px;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-btn {
+    border-radius: 5px;
+  }
+
+  .country-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .country-flag {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

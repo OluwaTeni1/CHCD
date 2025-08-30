@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHCD-UK|PARTNER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="partner.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">CHCD-UK</a>
+            </div>
+
+            <ul class="nav-links mb-0">
+                <button class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#objective">Core Objectives</a></li>
+                <li><a href="index.html#history">Work History</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="partner.html">Partnership</a></li>
+                <li><a href="index.html#board">Board</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="donate">
+                <a href="index.html#donate">Donate</a>
+            </div>
+
+            <button class="open">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="partnerships-section">
+        <div class="section-header">
+            <h2>Newsletters & Partnership Opportunities</h2>
+            <p>Explore our initiatives and collaboration opportunities across different regions</p>
+        </div>
+
+        <div class="country-tabs">
+            <div class="country-tab nigeria active" data-country="nigeria">Nigeria</div>
+            <div class="country-tab kenya" data-country="kenya">Kenya</div>
+            <div class="country-tab uganda" data-country="uganda">Uganda</div>
+            <div class="country-tab ghana" data-country="ghana">Ghana</div>
+            <div class="country-tab europe" data-country="europe">Europe</div>
+        </div>
+
+        <!-- Nigeria Content -->
+        <div class="country-content active" id="nigeria-content">
+            <div class="country-header">
+                <div class="country-flag"
+                    style="background: linear-gradient(to bottom, #008751 0%, #008751 33%, #FFFFFF 33%, #FFFFFF 66%, #008751 66%, #008751 100%);">
+                </div>
+                <div>
+                    <h2 class="country-title">Nigeria Initiatives</h2>
+                    <p>Community development programs across Nigeria</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Education Program">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">September 15, 2023</div>
+                        <h3 class="newsletter-title">Education Outreach in Northern Nigeria</h3>
+                        <p class="newsletter-excerpt">Our latest initiative to improve literacy rates in rural
+                            communities...</p>
+                        <a href="newsletter.html?country=nigeria&id=education" class="btn-read">Read Newsletter</a>
+                    </div>
+                </div>
+
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Agricultural Program">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">August 28, 2023</div>
+                        <h3 class="newsletter-title">Sustainable Agriculture Project</h3>
+                        <p class="newsletter-excerpt">How we're helping farmers adopt sustainable practices in
+                            Nigeria...
+                        </p>
+                        <a href="newsletter.html?country=nigeria&id=education" class="btn-read">Read Education
+                            Newsletter</a>
+
+                    </div>
+                </div>
+
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Healthcare Program">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">July 10, 2023</div>
+                        <h3 class="newsletter-title">Healthcare Access in Rural Communities</h3>
+                        <p class="newsletter-excerpt">Expanding medical services to underserved areas in Nigeria...</p>
+                        <a href="newsletter.html?country=nigeria&id=education" class="btn-read">Read Education
+                            Newsletter</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-opportunities">
+                <h3>Partnership Opportunities in Nigeria</h3>
+                <ul class="opportunity-list">
+                    <li>Corporate sponsorship for education programs in rural areas</li>
+                    <li>Collaboration with local NGOs for community development projects</li>
+                    <li>Partnership with agricultural organizations for sustainable farming initiatives</li>
+                    <li>Healthcare partnerships to expand medical services</li>
+                    <li>Technology training programs for youth development</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kenya Content -->
+        <div class="country-content" id="kenya-content">
+            <div class="country-header">
+                <div class="country-flag"
+                    style="background: linear-gradient(to bottom, #000000 0%, #000000 25%, #DE2910 25%, #DE2910 50%, #006600 50%, #006600 75%, #FFFFFF 75%, #FFFFFF 100%);">
+                </div>
+                <div>
+                    <h2 class="country-title">Kenya Initiatives</h2>
+                    <p>Empowering communities across Kenya</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Water Program">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">September 10, 2023</div>
+                        <h3 class="newsletter-title">Clean Water Access in Arid Regions</h3>
+                        <p class="newsletter-excerpt">Our project to provide sustainable water solutions in Northern
+                            Kenya...</p>
+                        <a href="newsletter.html?country=kenya&id=water" class="btn-read">Read Water Newsletter</a>
+                    </div>
+                </div>
+
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Women Empowerment">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">August 15, 2023</div>
+                        <h3 class="newsletter-title">Women's Entrepreneurship Program</h3>
+                        <p class="newsletter-excerpt">Empowering women through business training and microfinance...</p>
+                        <a href="newsletter.html?country=kenya&id=water" class="btn-read">Read Water Newsletter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-opportunities">
+                <h3>Partnership Opportunities in Kenya</h3>
+                <ul class="opportunity-list">
+                    <li>Water conservation and access initiatives</li>
+                    <li>Women empowerment and entrepreneurship programs</li>
+                    <li>Wildlife conservation partnerships</li>
+                    <li>Educational technology initiatives</li>
+                    <li>Renewable energy projects for rural communities</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Uganda Content -->
+        <div class="country-content" id="uganda-content">
+            <div class="country-header">
+                <div class="country-flag"
+                    style="background: linear-gradient(to bottom, #000000 0%, #000000 33%, #FFD100 33%, #FFD100 66%, #D90000 66%, #D90000 100%);">
+                </div>
+                <div>
+                    <h2 class="country-title">Uganda Initiatives</h2>
+                    <p>Building sustainable communities in Uganda</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Community Meeting">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">September 5, 2023</div>
+                        <h3 class="newsletter-title">Refugee Support Programs</h3>
+                        <p class="newsletter-excerpt">Assisting refugee communities with education and livelihood
+                            programs...</p>
+                        <a href="#" class="btn-read">Read Newsletter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-opportunities">
+                <h3>Partnership Opportunities in Uganda</h3>
+                <ul class="opportunity-list">
+                    <li>Refugee support and integration programs</li>
+                    <li>Healthcare initiatives for rural communities</li>
+                    <li>Agricultural development projects</li>
+                    <li>Education infrastructure development</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ghana Content -->
+        <div class="country-content" id="ghana-content">
+            <div class="country-header">
+                <div class="country-flag"
+                    style="background: linear-gradient(to bottom, #CE1126 0%, #CE1126 33%, #FCD116 33%, #FCD116 66%, #006B3F 66%, #006B3F 100%);">
+                </div>
+                <div>
+                    <h2 class="country-title">Ghana Initiatives</h2>
+                    <p>Development programs across Ghana</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1580375605110-a2a45c82e38f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Education Program">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">August 20, 2023</div>
+                        <h3 class="newsletter-title">Digital Literacy in Rural Schools</h3>
+                        <p class="newsletter-excerpt">Bringing technology education to underserved communities in
+                            Ghana...
+                        </p>
+                        <a href="#" class="btn-read">Read Newsletter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-opportunities">
+                <h3>Partnership Opportunities in Ghana</h3>
+                <ul class="opportunity-list">
+                    <li>Technology education initiatives</li>
+                    <li>Cocoa farmers support programs</li>
+                    <li>Healthcare access in remote areas</li>
+                    <li>Youth skills development programs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Europe Content -->
+        <div class="country-content" id="europe-content">
+            <div class="country-header">
+                <div class="country-flag"
+                    style="background: linear-gradient(to bottom, #003399 0%, #003399 50%, #FFCC00 50%, #FFCC00 100%);">
+                </div>
+                <div>
+                    <h2 class="country-title">European Partnerships</h2>
+                    <p>Collaborating with European organizations for African development</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-card">
+                    <div class="newsletter-image">
+                        <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Partnership Meeting">
+                    </div>
+                    <div class="newsletter-content">
+                        <div class="newsletter-date">September 1, 2023</div>
+                        <h3 class="newsletter-title">EU-Africa Development Partnerships</h3>
+                        <p class="newsletter-excerpt">How European organizations are supporting development initiatives
+                            across Africa...</p>
+                        <a href="#" class="btn-read">Read Newsletter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-opportunities">
+                <h3>Partnership Opportunities in Europe</h3>
+                <ul class="opportunity-list">
+                    <li>Collaboration with European NGOs for African development projects</li>
+                    <li>Research partnerships with European universities</li>
+                    <li>Corporate social responsibility initiatives with European companies</li>
+                    <li>EU funding opportunities for development programs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="subscribe-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Stay updated with our latest initiatives and partnership opportunities</p>
+            <form class="subscribe-form">
+                <input type="email" class="subscribe-input" placeholder="Your email address">
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-badge">
+                        <i class="fas fa-heart"></i> Making a Difference
+                    </div>
+                    <h5 class="footer-title">About Our Mission</h5>
+                    <p>
+                        We are committed to creating sustainable change through community
+                        empowerment and development initiatives across Africa.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#about"><i class="fas fa-chevron-right"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="#objective"><i class="fas fa-chevron-right"></i> Core Objectives</a>
+                        </li>
+                        <li>
+                            <a href="#history"><i class="fas fa-chevron-right"></i> Work History</a>
+                        </li>
+                        <li>
+                            <a href="adoption.html"><i class="fas fa-chevron-right"></i> Adoption</a>
+                        </li>
+                        <li>
+                            <a href="partner.html"><i class="fas fa-chevron-right"></i>Partnership/a>
+                        </li>
+                        <li>
+                            <a href="#board"><i class="fas fa-chevron-right"></i> Board</a>
+                        </li>
+                        <li>
+                        <li>
+                            <a href="#events"><i class="fas fa-chevron-right"></i>Events</a>
+                        </li>
+                        <li>
+                            <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Details</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tottenham Town Hall
+
+                                <br />Approach Rd, London N15 4RY,<br />United Kingdom</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+44 777232845<br />+44 7961453681 <br>+44 7417562719</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>id@chcduk.org <br />swww.chcduk.org
+                                <br />www.chcdonline.org</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Stay Updated</h5>
+                    <p>
+                        Subscribe to our newsletter for the latest updates on our projects
+                        and initiatives.
+                    </p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required />
+                        <button type="submit">
+                            Subscribe <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>
+                    &copy; <span id="Date"></span> Community Hope. All rights reserved.
+                    | Designed with
+                    <i class="fas fa-heart" style="color: #ffd700"></i> for a better
+                    tomorrow
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="partner.js"></script>
+</body>
+
+</html>
