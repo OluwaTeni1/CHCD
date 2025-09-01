@@ -295,3 +295,153 @@ function updateYear() {
   const newYear = new Date().getFullYear();
   document.getElementById("Date").textContent = newYear;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all gallery items
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const modalCaption = document.getElementById("modalCaption");
+  const closeModal = document.getElementById("modalClose");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const viewMoreIcon = viewMoreBtn.querySelector(".icon");
+
+  let currentIndex = 0;
+  let images = [];
+  let isExpanded = false;
+
+  // View More functionality
+  viewMoreBtn.addEventListener("click", function () {
+    const hiddenItems = document.querySelectorAll(".gallery-item.hidden");
+
+    if (isExpanded) {
+      // Collapse the view
+      hiddenItems.forEach((item) => {
+        item.classList.add("hidden");
+      });
+      viewMoreBtn.innerHTML =
+        'View More <i class="fas fa-chevron-down icon"></i>';
+      viewMoreBtn.classList.remove("expanded");
+      isExpanded = false;
+
+      // Scroll to the top of the gallery
+      document
+        .querySelector(".gallery-grid")
+        .scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Expand the view
+      hiddenItems.forEach((item) => {
+        item.classList.remove("hidden");
+      });
+      viewMoreBtn.innerHTML =
+        'View Less <i class="fas fa-chevron-up icon"></i>';
+      viewMoreBtn.classList.add("expanded");
+      isExpanded = true;
+    }
+  });
+
+  // Create array of image data
+  galleryItems.forEach((item, index) => {
+    const img = item.querySelector("img");
+    const title = item.querySelector(".gallery-item-title");
+    const desc = item.querySelector(".gallery-item-desc");
+
+    images.push({
+      src: img.src,
+      alt: img.alt,
+      title: title ? title.textContent : "",
+      desc: desc ? desc.textContent : "",
+    });
+
+    // Add click event to each gallery item
+    item.addEventListener("click", () => {
+      currentIndex = index;
+      openModal();
+    });
+  });
+
+  // Open modal with current image
+  function openModal() {
+    modal.classList.add("active");
+    modalImg.src = images[currentIndex].src;
+    modalImg.alt = images[currentIndex].alt;
+    modalCaption.innerHTML = `<strong>${images[currentIndex].title}</strong><br>${images[currentIndex].desc}`;
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+  }
+
+  // Close modal
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = ""; // Re-enable scrolling
+  });
+
+  // Navigate to previous image
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex].src;
+    modalImg.alt = images[currentIndex].alt;
+    modalCaption.innerHTML = `<strong>${images[currentIndex].title}</strong><br>${images[currentIndex].desc}`;
+  });
+
+  // Navigate to next image
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex].src;
+    modalImg.alt = images[currentIndex].alt;
+    modalCaption.innerHTML = `<strong>${images[currentIndex].title}</strong><br>${images[currentIndex].desc}`;
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (modal.classList.contains("active")) {
+      if (e.key === "Escape") {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      } else if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImg.src = images[currentIndex].src;
+        modalImg.alt = images[currentIndex].alt;
+        modalCaption.innerHTML = `<strong>${images[currentIndex].title}</strong><br>${images[currentIndex].desc}`;
+      } else if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex].src;
+        modalImg.alt = images[currentIndex].alt;
+        modalCaption.innerHTML = `<strong>${images[currentIndex].title}</strong><br>${images[currentIndex].desc}`;
+      }
+    }
+  });
+
+  // Filter functionality
+  const filterButtons = document.querySelectorAll(".filter-btn");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add active class to clicked button
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      galleryItems.forEach((item) => {
+        if (filter === "all" || item.getAttribute("data-category") === filter) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
